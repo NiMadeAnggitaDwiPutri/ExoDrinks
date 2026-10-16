@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es Teler Sultan - Exo Drinks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body
+    class="bg-amber-50/30 text-gray-800 font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-green">
+
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <a href="#beranda" class="flex items-center space-x-3 group">
+                    <div
+                        class="w-11 h-11 rounded-full bg-white flex items-center justify-center shadow-lg border-2 border-white overflow-hidden transform group-hover:rotate-12 transition duration-300">
+                        <img src="logo.png" alt="Logo Es Teler Sultan" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span
+                            class="text-2xl font-black tracking-tight text-white transition-colors duration-300 drop-shadow-md navbar-text"
+                            id="brand-title">
+                            ES TELER <span class="text-brand-gold">SULTAN</span>
+                        </span>
+                        <span
+                            class="block text-[10px] tracking-widest text-emerald-200 font-bold uppercase navbar-subtext">Rasa
+                            Mewah Porsi Melimpah</span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda"
+                        class="nav-link text-white hover:text-brand-gold font-medium transition duration-200 py-1 border-b-2 border-transparent hover:border-brand-gold">Beranda</a>
+                    <a href="#tentang"
+                        class="nav-link text-white hover:text-brand-gold font-medium transition duration-200 py-1 border-b-2 border-transparent hover:border-brand-gold">Tentang
+                        Kami</a>
+                    <a href="#menu"
+                        class="nav-link text-white hover:text-brand-gold font-medium transition duration-200 py-1 border-b-2 border-transparent hover:border-brand-gold">Menu
+                        Favorit</a>
+                    <a href="#testimoni"
+                        class="nav-link text-white hover:text-brand-gold font-medium transition duration-200 py-1 border-b-2 border-transparent hover:border-brand-gold">Testimoni</a>
+                    <a href="#kontak"
+                        class="nav-link text-white hover:text-brand-gold font-medium transition duration-200 py-1 border-b-2 border-transparent hover:border-brand-gold">Kontak</a>
+                </div>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#menu"
+                        class="bg-gradient-to-r from-brand-gold to-yellow-400 hover:from-yellow-400 hover:to-brand-gold text-brand-purple font-bold px-6 py-2.5 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition duration-200 flex items-center gap-2 border border-white/40">
+                        <i class="fa-solid fa-glass-water"></i>
+                        <span>Pesan Sekarang</span>
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute inset-x-0 top-full bg-brand-purple px-4 pt-3 pb-6 space-y-3 shadow-2xl rounded-b-2xl border-t border-purple-800">
+            <a href="#beranda" onclick="closeMobileMenu()"
+                class="mobile-nav-item block text-white font-medium py-2 px-3 rounded-lg hover:bg-white/10">Beranda</a>
+            <a href="#tentang" onclick="closeMobileMenu()"
+                class="mobile-nav-item block text-white font-medium py-2 px-3 rounded-lg hover:bg-white/10">Tentang
+                Kami</a>
+            <a href="#menu" onclick="closeMobileMenu()"
+                class="mobile-nav-item block text-white font-medium py-2 px-3 rounded-lg hover:bg-white/10">Menu
+                Favorit</a>
+            <a href="#testimoni" onclick="closeMobileMenu()"
+                class="mobile-nav-item block text-white font-medium py-2 px-3 rounded-lg hover:bg-white/10">Testimoni</a>
+            <a href="#kontak" onclick="closeMobileMenu()"
+                class="mobile-nav-item block text-white font-medium py-2 px-3 rounded-lg hover:bg-white/10">Kontak</a>
+            <a href="#menu" onclick="closeMobileMenu()"
+                class="mobile-nav-item block text-center bg-brand-gold text-brand-purple font-bold py-3 rounded-xl shadow-md">
+                <i class="fa-solid fa-glass-water mr-2"></i>Pesan Sekarang
+            </a>
+        </div>
+    </nav>
+
+    <section id="beranda" class="relative pt-28 pb-20 md:pt-36 md:pb-32 hero-gradient overflow-hidden text-white">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 rounded-full bg-white blur-2xl"></div>
+            <div class="absolute bottom-10 right-10 w-64 h-64 rounded-full bg-yellow-300 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-brand-gold font-semibold text-sm badge-pulse">
+                        <i class="fa-solid fa-fire text-amber-300"></i>
+                        <span>Pelopor Es Teler Toping Melimpah #1</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Nikmati Kesegaran <br class="hidden sm:inline">
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-300 to-amber-100 font-serif italic">Kelas
+                            Sultan</span> Sesungguhnya!
+                    </h1>
+
+                    <p
+                        class="text-emerald-100 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Perpaduan buah alpukat mentega premium, durian manis legit, kelapa muda gurih, dan sirup resep
+                        rahasia keluarga yang bakal bikin harimu makin segar.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#menu"
+                            class="w-full sm:w-auto bg-brand-gold hover:bg-yellow-400 text-brand-green font-extrabold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 text-center flex items-center justify-center gap-3 border-2 border-yellow-200">
+                            <i class="fa-solid fa-glass-water text-xl"></i>
+                            <span>Lihat Menu & Order</span>
+                        </a>
+                        <a href="https://wa.me/662881024356313?text=Halo%20Es%20Teler%20Sultan,%20saya%20mau%20tanya%20promo%20hari%20ini"
+                            target="_blank"
+                            class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-2xl backdrop-blur-md border border-white/30 transition duration-300 text-center flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-300 text-xl"></i>
+                            <span>Chat WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="pt-6 grid grid-cols-3 gap-4 border-t border-white/10 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-black text-brand-gold">100%</p>
+                            <p class="text-xs text-emerald-100">Buah Segar Asli</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-black text-brand-gold">10k+</p>
+                            <p class="text-xs text-emerald-100">Porsi Terjual</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-black text-brand-gold">3.7★</p>
+                            <p class="text-xs text-emerald-100">Rating Pelanggan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div
+                        class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-3xl bg-gradient-to-tr from-brand-gold/30 to-white/20 backdrop-blur-md p-4 border border-white/30 shadow-2xl flex items-center justify-center">
+
+                        <div
+                            class="w-full h-full bg-emerald-900/40 rounded-2xl flex flex-col items-center justify-center p-6 text-center relative overflow-hidden border border-white/10">
+                            <svg class="w-40 h-40 text-brand-gold drop-shadow-xl animate-bounce" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <div class="absolute inset-0 bg-cover bg-center opacity-90 transition transform hover:scale-105 duration-500"
+                                style="background-image: url('es teler durian b.jpeg');">
+                            </div>
+
+                            <div
+                                class="absolute bottom-4 left-4 right-4 bg-emerald-950/80 backdrop-blur-md p-3 rounded-xl border border-amber-400/40 text-left">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs font-bold text-brand-gold uppercase tracking-wider">
+                                            Recommended</p>
+                                        <p class="text-sm font-extrabold text-white">Es Teler Durian Besar</p>
+                                    </div>
+                                    <span
+                                        class="bg-brand-accent text-white font-bold text-xs px-2.5 py-1 rounded-full">Rp
+                                        16.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute -top-6 -right-6 bg-brand-accent text-white font-extrabold p-4 rounded-2xl shadow-xl transform rotate-12 border-2 border-white flex flex-col items-center">
+                            <span class="text-xs">PROMO</span>
+                            <span class="text-lg">DISKON 20%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.37,130.83,121.31,200,110.1,241.67,103.35,282.8,83.84,321.39,56.44Z"
+                    fill="#fffde7"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-5">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-2 bg-gradient-to-r from-brand-green to-brand-gold rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-300">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="tempat.png" alt="Outlet Es Teler Sultan"
+                                class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition duration-500">
+                            <div class="p-6 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-3 bg-emerald-100 text-brand-green rounded-xl">
+                                        <i class="fa-solid fa-store text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Outlet Utama & Mitra</h4>
+                                        <p class="text-sm text-gray-500">Bersih & Nyaman untuk Nongkrong</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div
+                        class="inline-block bg-emerald-100 text-brand-green font-bold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                        Cerita Brand Kami
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-green tracking-tight">
+                        Dari Bandung ke Jakarta,<br>
+                        <span class="text-brand-golddark font-serif italic"> Lalu Menyapa Dewata!</span>
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Siapa sangka, kenikmatan Es Teler Sultan yang viral ini dahulunya lahir dari
+                        usaha gerobak kecil-kecilan. Dibuat dengan ketulusan dan bahan-bahan buah pilihan
+                        setiap harinya, kelezatan rasa kelas sultan ini dengan cepat menyebar dari mulut ke
+                        mulut hingga memikat hati para pecinta kuliner di Bandung dan Jakarta.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Setelah perjalanan panjang dan dukungan luar biasa dari ribuan pelanggan setia,
+                        kini kami hadir di Bali! Kami membawa resep asli yang sama, porsi buah yang tak pernah pelit,
+                        dan kesegaran ikonik yang siap melengkapi hari-hari cerah Anda di Bali.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div
+                            class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-amber-100 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-brand-lightgreen text-xl"></i>
+                            <span class="font-semibold text-gray-800 text-sm">Buah Alpukat Mentega Pilihan</span>
+                        </div>
+                        <div
+                            class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-amber-100 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-brand-lightgreen text-xl"></i>
+                            <span class="font-semibold text-gray-800 text-sm">Durian Asli Daging Tebal</span>
+                        </div>
+                        <div
+                            class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-amber-100 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-brand-lightgreen text-xl"></i>
+                            <span class="font-semibold text-gray-800 text-sm">Santan & Sirup Fresh Daily</span>
+                        </div>
+                        <div
+                            class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-amber-100 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-brand-lightgreen text-xl"></i>
+                            <span class="font-semibold text-gray-800 text-sm">Jaminan Porsi Puas & Kenyang</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="bg-amber-100 text-amber-800 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                    Pilihan Favorit Sultan
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-purple mt-3">
+                    Menu Spesial Yang Wajib Coba
+                </h2>
+                <p class="text-gray-500 mt-2">
+                    Pilih menu favoritmu di bawah ini dan langsung pesan via WhatsApp tanpa antri!
+                </p>
+                <div class="flex flex-wrap justify-center gap-2 mt-8" id="menu-filters">
+                    <button onclick="filterMenu('all')"
+                        class="filter-btn active-filter bg-brand-purple text-white font-bold px-5 py-2 rounded-full text-sm transition shadow-md">Semua
+                        Menu</button>
+                    <button onclick="filterMenu('esteler')"
+                        class="filter-btn bg-gray-100 text-gray-700 hover:bg-gray-200 font-semibold px-5 py-2 rounded-full text-sm transition">Es
+                        Teler Sultan</button>
+                    <button onclick="filterMenu('jus')"
+                        class="filter-btn bg-gray-100 text-gray-700 hover:bg-gray-200 font-semibold px-5 py-2 rounded-full text-sm transition">Aneka
+                        Jus & Minuman</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                <div
+                    class="menu-card category-esteler bg-amber-50/40 rounded-2xl border border-amber-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="es teler ori.jpeg" alt="Es Teler Ori"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-brand-gold text-brand-purple font-extrabold text-xs px-3 py-1 rounded-full shadow">POPULER</span>
+                        <div
+                            class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-brand-purple font-black text-sm shadow">
+                            Rp 10k - 15k
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-purple transition">Es
+                                Teler Ori</h3>
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">Racikan es teler segar asli dengan
+                                alpukat mentega, nangka manis, kelapa muda, cincau hitam, dan mutiara disiram santan
+                                gurih manis.</p>
+                            <div class="mt-3 flex gap-2">
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Kecil:
+                                    Rp 10.000</span>
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Besar:
+                                    Rp 15.000</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button onclick="openOrderModal('Es Teler Ori', 'Rp 10.000 - Rp 15.000')"
+                                class="w-full bg-brand-purple hover:bg-purple-900 text-white font-bold py-3 rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-md">
+                                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                                <span>Pesan via WA</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="menu-card category-esteler bg-amber-50/40 rounded-2xl border border-amber-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="es teler durian.jpeg" alt="Es Teler Durian"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-brand-accent text-white font-extrabold text-xs px-3 py-1 rounded-full shadow">BEST
+                            SELLER</span>
+                        <div
+                            class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-brand-purple font-black text-sm shadow">
+                            Rp 15k - 20k
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-purple transition">Es
+                                Teler Durian</h3>
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">Es teler komplit isian melimpah
+                                ditambah topping es krim/daging durian asli yang manis legit dan wangi menggugah selera.
+                            </p>
+                            <div class="mt-3 flex gap-2">
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Kecil:
+                                    Rp 15.000</span>
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Besar:
+                                    Rp 20.000</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button onclick="openOrderModal('Es Teler Durian', 'Rp 15.000 - Rp 20.000')"
+                                class="w-full bg-brand-purple hover:bg-purple-900 text-white font-bold py-3 rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-md">
+                                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                                <span>Pesan via WA</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="menu-card category-jus bg-amber-50/40 rounded-2xl border border-amber-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="aneka jus.jpeg" alt="Aneka Jus Buah"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-emerald-600 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow">FRESH
+                            JUICE</span>
+                        <div
+                            class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-brand-purple font-black text-sm shadow">
+                            Rp 10k - 15k
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-purple transition">Aneka
+                                Jus Buah Segar</h3>
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">Jus buah segar pilihan: Alpukat,
+                                Durian, Mangga, Buah Naga, Strawberry, Jambu Biji, Melon, Sirsak, Semangka, & Rasberry.
+                            </p>
+                            <div class="mt-3 flex gap-2">
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Kecil:
+                                    Rp 10.000</span>
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Besar:
+                                    Rp 15.000</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button onclick="openOrderModal('Aneka Jus Buah Segar', 'Rp 10.000 - Rp 15.000')"
+                                class="w-full bg-brand-purple hover:bg-purple-900 text-white font-bold py-3 rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-md">
+                                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                                <span>Pesan via WA</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="menu-card category-jus bg-amber-50/40 rounded-2xl border border-amber-100 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="cappuccino cincau.jpeg" alt="Cappuccino Cincau"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow">FAVORIT</span>
+                        <div
+                            class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-brand-purple font-black text-sm shadow">
+                            Rp 10k - 15k
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-purple transition">
+                                Cappuccino Cincau</h3>
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">Perpaduan harum rasa kopi cappuccino
+                                creamy berpadu dengan serutan cincau hitam yang lembut dan kenyal.</p>
+                            <div class="mt-3 flex gap-2">
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Kecil:
+                                    Rp 10.000</span>
+                                <span
+                                    class="bg-purple-100 text-brand-purple text-xs font-bold px-2.5 py-1 rounded-md">Besar:
+                                    Rp 15.000</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button onclick="openOrderModal('Cappuccino Cincau', 'Rp 10.000 - Rp 15.000')"
+                                class="w-full bg-brand-purple hover:bg-purple-900 text-white font-bold py-3 rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-md">
+                                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                                <span>Pesan via WA</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-20 bg-amber-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="bg-emerald-100 text-brand-green font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
+                    Ulasan Pelanggan
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-green mt-3">
+                    Kata Mereka Yang Sudah Coba
+                </h2>
+                <p class="text-gray-500 mt-2">
+                    Kepuasan lidah para Sultan adalah kebanggaan utama kami.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-md border border-amber-100 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm leading-relaxed mb-6">
+                            "Jujur ini es teler paling nagih! Kurang banyak dapet duriannya tapi manisnya asli, bukan
+                            cuma
+                            essence. Es Teler Durian Sultan recommended banget pas cuaca panas."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                            alt="Customer" class="w-11 h-11 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Rina Saraswati</h4>
+                            <p class="text-xs text-gray-500">Food Vlogger</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-md border border-amber-100 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm leading-relaxed mb-6">
+                            "Porsinya bener-bener Sultan! Gak pelit alpukat dan kelapanya. Kuahnya gurih creamy banget,
+                            gak kebayangan legat manisnya pas. Bikin ketagihan sekeluarga."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                            alt="Customer" class="w-11 h-11 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Budi Santoso</h4>
+                            <p class="text-xs text-gray-500">Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-md border border-amber-100 flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="flex text-amber-400 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm leading-relaxed mb-6">
+                            "Pesan via WhatsApp responnya lambat dan kurang ramah. Pas nyampe rumah es nya sudah
+                            meleleh, tapi
+                            kemasannya aman gak tumpah."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                            alt="Customer" class="w-11 h-11 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Maya Pertiwi</h4>
+                            <p class="text-xs text-gray-500">Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-20 bg-brand-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center">
+                            <img src="logo.png" alt="Logo Es Teler Sultan" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-2xl font-black text-white">ES TELER <span
+                                class="text-brand-gold">SULTAN</span></span>
+                    </div>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Spesialis Es Teler dan Alpukat Kocok kelas Sultan dengan bahan alami berkualitas, porsi
+                        melimpah, dan pelayanan ramah.
+                    </p>
+
+                    <div class="space-y-4 pt-2 text-sm text-gray-300">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-gold text-lg mt-0.5"></i>
+                            <span>Jl. Antasura No.34, Peguyangan Utara, Kota Denpasar</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-brand-gold text-lg"></i>
+                            <span>Buka Setiap Hari: 08.00 - 22.00 WITA</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-brand-gold text-lg"></i>
+                            <span>+62 881-0243-56313</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="https://www.instagram.com/exodrinks_bali?rpxt=NThlOHRvaHVjYW5i"
+                            class="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-green flex items-center justify-center transition duration-300">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gfyyiyiy?_r=1&_t=ZS-9AalaNN1mIG"
+                            class="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-green flex items-center justify-center transition duration-300">
+                            <i class="fa-brands fa-tiktok text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-md">
+                    <h3 class="text-2xl font-bold text-white mb-2">Pesan Cepat Via WhatsApp</h3>
+                    <p class="text-gray-400 text-sm mb-6">Isi formulir ringkas di bawah ini untuk langsung terhubung
+                        dengan admin kami.</p>
+
+                    <form id="wa-order-form" onsubmit="handleQuickOrder(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs text-gray-300 mb-1 font-medium">Nama Lengkap</label>
+                                <input type="text" id="order-name" required placeholder="Contoh: Budi"
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-300 mb-1 font-medium">Nomor WhatsApp</label>
+                                <input type="tel" id="order-phone" required placeholder="0812345678"
+                                    class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs text-gray-300 mb-1 font-medium">Pilih Menu & Jumlah</label>
+                            <select id="order-item"
+                                class="w-full bg-gray-800 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold text-sm">
+                                <option value="Es Teler Ori Kecil (Rp 10.000)">Es Teler Ori (Kecil) - Rp 10.000</option>
+                                <option value="Es Teler Ori Besar (Rp 15.000)">Es Teler Ori (Besar) - Rp 15.000</option>
+                                <option value="Es Teler Durian Kecil (Rp 15.000)">Es Teler Durian (Kecil) - Rp 15.000
+                                </option>
+                                <option value="Es Teler Durian Besar (Rp 20.000)">Es Teler Durian (Besar) - Rp 20.000
+                                </option>
+                                <option value="Aneka Jus Buah Segar Kecil (Rp 10.000)">Aneka Jus Buah Segar (Kecil) - Rp
+                                    10.000</option>
+                                <option value="Aneka Jus Buah Segar Besar (Rp 15.000)">Aneka Jus Buah Segar (Besar) - Rp
+                                    15.000</option>
+                                <option value="Cappuccino Cincau Kecil (Rp 10.000)">Cappuccino Cincau (Kecil) - Rp
+                                    10.000</option>
+                                <option value="Cappuccino Cincau Besar (Rp 15.000)">Cappuccino Cincau (Besar) - Rp
+                                    15.000</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs text-gray-300 mb-1 font-medium">Catatan Tambahan
+                                (Opsional)</label>
+                            <textarea id="order-note" rows="2" placeholder="Contoh: Kurangi manis / es dipisah"
+                                class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold text-sm"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-brand-gold to-yellow-400 hover:from-yellow-400 hover:to-brand-gold text-brand-green font-extrabold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Kirim Pesanan Sekarang</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Es Teler Sultan & Jus Exodrinks. Segar, Mewah, & Nikmat. Dibuat oleh Ni Made Anggita Dwi
+                    Putri</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/62881024356313?text=Halo%20Es%20Teler%20Sultan,%20saya%20mau%20order" target="_blank"
+        class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transform hover:scale-110 transition duration-300 border-2 border-white">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <div id="order-modal"
+        class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-amber-100 transform transition-all scale-95 opacity-0"
+            id="modal-card">
+
+            <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div
+                    class="w-12 h-12 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-bag-shopping text-xl"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-gray-900">Konfirmasi Pemesanan</h3>
+                <p class="text-xs text-gray-500 mt-1">Pesanan Anda akan dikirimkan ke WhatsApp resmi kami.</p>
+            </div>
+
+            <div class="bg-amber-50/60 p-4 rounded-2xl mb-6 border border-amber-100">
+                <p class="text-xs text-gray-500 font-semibold uppercase">Menu Yang Dipilih:</p>
+                <h4 id="modal-item-title" class="text-lg font-bold text-brand-green mt-0.5">-</h4>
+                <p id="modal-item-price" class="text-sm font-extrabold text-brand-accent mt-0.5">-</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Jumlah Porsi</label>
+                    <input type="number" id="modal-qty" min="1" value="1" required
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Nama Pemesan</label>
+                    <input type="text" id="modal-name" required placeholder="Masukkan nama Anda"
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Catatan/Alamat</label>
+                    <textarea id="modal-note" rows="2" placeholder="Catatan khusus atau alamat kirim"
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-brand-green hover:bg-emerald-800 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Lanjut Ke WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
